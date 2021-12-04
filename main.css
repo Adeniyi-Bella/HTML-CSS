@@ -29,3 +29,11 @@ h2{
 .borderImg {
     border: 2px solid red;
 }
+
+ul li {
+    color: black;
+    font-size: 20px;
+}
+ul > li {
+    color: yellow;
+}
