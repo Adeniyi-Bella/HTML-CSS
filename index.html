@@ -2,30 +2,85 @@
 <html lang="en">
     <head>
         <meta charset="8">
-        <title> Learn CSS</title>
-        <link rel="stylesheet" href="main.css">
+        <title> My CSS Website</title>
+        <link rel="stylesheet" href="style.css">
 
     </head>
 
     <body>
+        <nav>
+            <ul class="topnav" id="dropdownClick">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li class="topnav-right"><a href="#signup">Sign up</a></li>
+                <li class="topnav-right"><a href="#signin">Sign in</a></li>
+                <li class="dropdownIcon"><a href="javascript:void(0);"onclick="dropdownMenu()">&#9776</a></li>
+            </ul>
+        </nav>
+
+        <div class="container" id="section-1-gradient">
+            <div class="row">
+                <div class="col-6">
+                    <div class="leftSide-col">
+                        <h1 class="large">Crazy Radness</h1>
+                        <h1 class="large">Made for Developers</h1>
+                    </div>
+                    <form>
+                        <div class="leftSide-col">
+                            <h2>User name</h2>
+                            <input class="inputbox" name="username" type="text" placeholder="Username">
+                            <h2>Password</h2>
+                            <input class="inputbox" name="password" type="text" placeholder="Password">
+                        </div>
+
+                    </form>
+
+                </div>
+                <div class="col-6">
+                    <div class="rigthSide-col">
+                        <div class="videoContainer">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/n7JhRDRK3Gg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
         
+        <header>
+            <h1 class="section2Header">The standards of Awesomeness</h1>
+        </header>
         <div class="container">
-            <h1>Skateboarding is awesome</h1>
-            <h2>Skateboarding is awesome</h2>
+            <div class="row">
+                <div class="col-4">
+                    <div class="box">
+                        <div class="icon">
+                            <img src="devicon.png">
+                        </div>
+                        <label>Chat with me</label>
+                        <p> Construction automation is so cool</p>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
-        <div> 
-            <img src="lion.jpg" class="borderImg">
-        </div>
-        <ul>
-            <li>I love to Skate</li>
-            <li>My favorite skate tricks</li>
-            <ol>
-                <li>360 Flops</li>
-                <li>Backside</li>
-            </ol>
-            <li>Skate till you can't walk</li>
-        </ul>
+        <script>
+            function dropdownMenu() {
+                var x = document.getElementById("dropdownClick");
+                if (x.className==="topnav") {
+                    x.className += " responsive";
+                    /*change topnav to topnav.responsive*/
+                }else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
     </body>
 
 </html>
